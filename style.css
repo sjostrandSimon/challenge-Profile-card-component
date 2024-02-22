@@ -1,0 +1,202 @@
+/*
+
+
+-- FONT
+
+Family: Kumbh Sans
+Weights: 400, 700
+
+-- COLORS
+
+Primary:
+hsl(185, 75%, 39%)
+hsl(229, 23%, 23%)
+hsl(227, 10%, 46%)
+
+Neutral:
+hsl(0, 0%, 59%)
+
+
+/****************************************/
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  font-size: 62.5%;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/**************************/
+/* STYLES */
+/**************************/
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  background-color: hsl(185, 75%, 39%);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.body-img-top {
+  position: absolute;
+  left: -5%;
+  top: -50%;
+  z-index: -1;
+}
+
+.body-img-bottom {
+  position: fixed;
+  right: -5%;
+  bottom: -50%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* CARD IMAGE STYLES */
+
+.profile-card {
+  background-color: #fff;
+  max-width: 35rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  box-shadow: 0 50px 45px rgba(45, 50, 72, 0.2);
+}
+
+.card-images {
+  position: relative;
+  margin-bottom: 6.8rem;
+}
+
+.profile-img-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+
+.profile-img {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+/* CARD TEXT STYLES */
+
+.person-info {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  line-height: 1.8;
+}
+
+.name {
+  display: inline;
+  color: hsl(229, 23%, 23%);
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+}
+
+.age {
+  color: hsl(227, 10%, 46%);
+  font-size: 1.8rem;
+}
+
+.location {
+  color: hsl(227, 10%, 46%);
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+hr {
+  background-color: hsl(0, 0%, 89%);
+  border: none;
+  padding: 0.01rem;
+  margin-bottom: 2.2rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2.2rem;
+}
+
+.stat {
+  min-width: 5.8rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.stat-count {
+  color: hsl(229, 23%, 23%);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  color: hsl(227, 10%, 46%);
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 400;
+}
+
+/******************/
+/* MEDIA QUERIES  */
+/******************/
+
+@media only screen and (max-width: 768px) {
+  .body-img-top,
+  .body-img-bottom {
+    display: none;
+  }
+
+  .profile-card {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .name,
+  .age {
+    font-size: 2rem;
+  }
+
+  .location {
+    font-size: 1.6rem;
+  }
+
+  .stat-count {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 1.2rem;
+  }
+}
