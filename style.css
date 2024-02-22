@@ -68,14 +68,14 @@ p {
 
 .body-img-top {
   position: absolute;
-  left: -20%;
+  left: -15%;
   top: -50%;
   z-index: -1;
 }
 
 .body-img-bottom {
   position: absolute;
-  right: -20%;
+  right: -15%;
   bottom: -50%;
   z-index: -1;
 }
@@ -100,7 +100,6 @@ p {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  z-index: 1;
 }
 
 .profile-img {
@@ -173,10 +172,6 @@ hr {
 /******************/
 
 @media only screen and (max-width: 768px) {
-  .body-img-top,
-  .body-img-bottom {
-  }
-
   .profile-card {
     max-width: 80%;
   }
