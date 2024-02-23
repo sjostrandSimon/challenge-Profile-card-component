@@ -1,25 +1,23 @@
 /*
 
+/* ------------------------- */
+/*         VARIABLES         */
+/* ------------------------- */
 
--- FONT
+:root {
+  /* Font */
+  --font-family: "Kumbh Sans", sans-serif;
 
-Family: Kumbh Sans
-Weights: 400, 700
+  /* Colors */
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Gray-neutral: hsl(0, 0%, 89%);
+}
 
--- COLORS
-
-Primary:
-hsl(185, 75%, 39%)
-hsl(229, 23%, 23%)
-hsl(227, 10%, 46%)
-
-Neutral:
-hsl(0, 0%, 59%)
-
-
-/****************************************/
-
-/* CSS RESET */
+/***********************/
+/*      CSS RESET      */
+/***********************/
 
 *,
 *::before,
@@ -47,40 +45,29 @@ img {
 }
 
 /**************************/
-/* STYLES */
+/*         STYLES         */
 /**************************/
 
 body {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--font-family);
   min-height: 100vh;
-  background-color: hsl(185, 75%, 39%);
+  background-color: var(--Dark-cyan);
   position: relative;
   overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
 }
 
 p {
   font-size: 1.8rem;
 }
-
-.body-img-top {
-  position: absolute;
-  left: -15%;
-  top: -50%;
-  z-index: -1;
-}
-
-.body-img-bottom {
-  position: absolute;
-  right: -15%;
-  bottom: -50%;
-  z-index: -1;
-}
-
-/* CARD IMAGE STYLES */
 
 .profile-card {
   background-color: #fff;
@@ -89,6 +76,10 @@ p {
   overflow: hidden;
   box-shadow: 0 50px 45px rgba(45, 50, 72, 0.2);
 }
+
+/*******************************/
+/*      CARD IMAGES STYLES      */
+/*******************************/
 
 .card-images {
   position: relative;
@@ -108,7 +99,9 @@ p {
   padding: 0.5rem;
 }
 
-/* CARD TEXT STYLES */
+/******************************/
+/*      CARD TEXT STYLES      */
+/******************************/
 
 .person-info {
   text-align: center;
@@ -118,25 +111,25 @@ p {
 
 .name {
   display: inline;
-  color: hsl(229, 23%, 23%);
+  color: var(--Very-dark-blue);
   font-size: 1.8rem;
   margin-right: 0.8rem;
 }
 
 .age {
-  color: hsl(227, 10%, 46%);
+  color: var(--Dark-grayish-blue);
   font-size: 1.8rem;
 }
 
 .location {
-  color: hsl(227, 10%, 46%);
+  color: var(--Dark-grayish-blue);
   font-size: 1.4rem;
   text-align: center;
   margin-bottom: 1.8rem;
 }
 
 hr {
-  background-color: hsl(0, 0%, 89%);
+  background-color: var(--Gray-neutral);
   border: none;
   padding: 0.01rem;
   margin-bottom: 2.2rem;
@@ -155,23 +148,23 @@ hr {
 }
 
 .stat-count {
-  color: hsl(229, 23%, 23%);
+  color: var(--Very-dark-blue);
   font-size: 1.8rem;
   font-weight: 700;
 }
 
 .stat-label {
-  color: hsl(227, 10%, 46%);
+  color: var(--Dark-grayish-blue);
   font-size: 1rem;
   letter-spacing: 0.15rem;
   font-weight: 400;
 }
 
-/******************/
-/* MEDIA QUERIES  */
-/******************/
+/***************************/
+/*      MEDIA QUERIES      */
+/***************************/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   .profile-card {
     max-width: 80%;
   }
